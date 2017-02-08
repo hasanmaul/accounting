@@ -285,7 +285,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <td>No Telefon</td>
                                     <td>
                                         <div class="input-control text full-size">
-                                            <textarea class="form-control" type="number" name="no_tlp" id="no_tlp" autocomplete="off"></textarea>
+                                            <input class="form-control" type="number" name="no_tlp" id="no_tlp" autocomplete="off">
                                         </div>
                                     </td>
                                 </tr>

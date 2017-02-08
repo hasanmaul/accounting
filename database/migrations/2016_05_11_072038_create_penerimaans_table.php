@@ -1,4 +1,4 @@
-    <?php
+<?php
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -19,7 +19,7 @@ class CreatePenerimaansTable extends Migration
             $table->string('jenis_kelamin');
             $table->string('ttl');
             $table->string('nama_perusahaan');
-            $table->string('no_tlp');
+            $table->integer('no_tlp');
             $table->enum('jenis_rek', ['BCA','Mandiri','BRI']);
             $table->integer('jumlah');   
             $table->timestamps();

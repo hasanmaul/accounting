@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use DB;
 use \App\tampilan;  
 use \App\penerimaan;
 use \App\reportpenerimaan;
@@ -15,8 +16,11 @@ class DashboardController extends Controller
     	$this->middleware('auth');
     }
 
-    public function index(){
-    	return view('dashboard');
+    public function index()
+    {
+        $penerimaans = DB::table('penerimaans')->count();
+        $tampilans = DB::table('tampilans')->count();
+    	return view('dashboard')->with('penerimaans', $penerimaans)->with('tampilans', $tampilans);
     }
 
     public function penerimaan(){

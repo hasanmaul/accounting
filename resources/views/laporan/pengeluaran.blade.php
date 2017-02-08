@@ -15,6 +15,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
  <!-- Bootstrap Core CSS -->
 <link href="/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" type="text/css" href="{{ url('dtpicker/css/bootstrap-datetimepicker.css') }}">
 <!-- Custom CSS -->
 <link href="/css/style.css" rel='stylesheet' type='text/css' />
 <!-- Graph CSS -->
@@ -32,7 +33,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script>
          new WOW().init();
     </script>
-<script src="/js/jquery-1.10.2.min.js"></script>
+    <script src="{{ url('plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>
+    <script src="{{ url('dtpicker/moment.js')}}"></script>
+    <script src="{{ url('bootstrap/js/transition.js') }}"></script>
+    <script src="{{ url('bootstrap/js/collapse.js') }}"></script>
+    <script src="{{ url('bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="/js/jquery-1.10.2.min.js"></script>
+    <script src="{{ url('dtpicker/js/bootstrap-datetimepicker.min.js')}}"></script>
 <!-- Placed js at the end of the document so the pages load faster -->
 
 </head> 
@@ -259,8 +266,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <tr>
                                     <td>Tanggal Pengeluaran</td>
                                     <td>
-                                        <div class="input-control text full-size">
-                                            <input class="form-control" type="text" name="tanggal_pengeluaran" id="tanggal_pengeluaran" autocomplete="off">
+                                        <div style="position: relative;">
+                                        <div class="text full-size">
+                                            <input type="text" class="form-control for_year" name="tanggal_pengeluaran" id="tanggal_pengeluaran" autocomplete="off">
                                         </div>
                                     </td>
                                 </tr>
@@ -314,6 +322,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   
 <script src="/js/jquery.nicescroll.js"></script>
 <script src="/js/scripts.js"></script>
+<script type="text/javascript">
+    $('.for_year').datetimepicker({ format: 'YYYY-MM-DD' });
+    </script>
 <!-- Bootstrap Core JavaScript -->
    <script src="/js/bootstrap.min.js"></script>
 </body>
