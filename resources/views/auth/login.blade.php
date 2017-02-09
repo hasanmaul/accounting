@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <title>Login Accounting Assistant</title>
-    <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+    <script src="{{url('http://s.codepen.io/assets/libs/modernizr.js')}}" type="text/javascript"></script>
 
 
     
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="{{url('css/reset.css')}}">
 
-    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'>
+    <link rel='stylesheet prefetch' href="{{url('http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')}}">
 
-        <link rel="stylesheet" href="/css/login.css">
+        <link rel="stylesheet" href="{{url('/css/login.css')}}">
 
     
     
@@ -46,9 +46,9 @@
   </div>
   
 </form>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="{{url('http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')}}"></script>
 
-        <script src="/js/index.js"></script>
+        <script src="{{url('/js/index.js')}}"></script>
 
     
     

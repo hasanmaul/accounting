@@ -2,6 +2,6 @@
 
 @section('halaman')
 <h1>Accounting Assistent</h1>
-<img src="images/Acounting Asistant.png">
+<img src="{{url('images/Acounting Asistant.png')}}">
 
 @endsection
