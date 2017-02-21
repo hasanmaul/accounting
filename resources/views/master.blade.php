@@ -14,21 +14,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
  <!-- Bootstrap Core CSS -->
-<link href="/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<link href="{{ url('/css/bootstrap.min.css') }}" rel='stylesheet' type='text/css' />
 <!-- Custom CSS -->
-<link href="/css/style.css" rel='stylesheet' type='text/css' />
+<link href="{{ url('/css/style.css') }}" rel='stylesheet' type='text/css' />
 <!-- Graph CSS -->
-<link href="/css/font-awesome.css" rel="stylesheet"> 
+<link href="{{ url('/css/font-awesome.css') }}" rel="stylesheet"> 
 <!-- jQuery -->
 <!-- lined-icons -->
-<link rel="stylesheet" href="/css/icon-font.min.css" type='text/css' />
+<link rel="stylesheet" href="{{ url('/css/icon-font.min.css') }}" type='text/css' />
 <!-- //lined-icons -->
 <!-- chart -->
-<script src="/js/Chart.js"></script>
+<script src="{{ url('/js/Chart.js') }}"></script>
 <!-- //chart -->
 <!--animate-->
-<link href="/css/animate.css" rel="stylesheet" type="text/css" media="all">
-<script src="/js/wow.min.js"></script>
+<link href="{{ url('/css/animate.css') }}" rel="stylesheet" type="text/css" media="all">
+<script src="{{ url('/js/wow.min.js') }}"></script>
     <script>
          new WOW().init();
     </script>
@@ -37,7 +37,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 <!---//webfonts---> 
  <!-- Meters graphs -->
-<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="{{ url('/js/jquery-1.10.2.min.js') }}"></script>
 <!-- Placed js at the end of the document so the pages load faster -->
 
 </head> 
@@ -49,10 +49,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <!--logo and iconic logo start-->
             <div class="logo">
-                <h3><a href="index.html">Acounting Assistent<span></span></a></h3>
+                <h3><a href="{{ url('index.html') }}">Acounting Assistent<span></span></a></h3>
             </div>
             <div class="logo-icon text-center">
-                <a href="/aa"><i class="lnr lnr-home"></i> </a>
+                <a href="{{ url('/aa') }}"><i class="lnr lnr-home"></i> </a>
             </div>
 
             <!--logo and iconic logo end-->
@@ -65,14 +65,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <a href="/penerimaan"><i class="lnr lnr-pencil"></i>
                                 <span>Penerimaan</span></a>
                                 <ul class="sub-menu-list">
-                                    <li><a href="/penerimaan">Penerimaan</a></li>
-                                    <li><a href="/penerimaan/report">Report Penerimaan</a>
+                                    <li><a href="{{ url('/penerimaan') }}">Penerimaan</a></li>
+                                    <li><a href="{{ url('/penerimaan/report') }}">Report Penerimaan</a>
                                 </ul>
                         </li>
-                        <li class="menu-list"><a href="/pengeluaran"><i class="lnr lnr-envelope"></i> <span>Pengeluaran</span></a>
+                        <li class="menu-list"><a href="{{ url('/pengeluaran') }}"><i class="lnr lnr-envelope"></i> <span>Pengeluaran</span></a>
                             <ul class="sub-menu-list">
-                                <li><a href="/pengeluaran">Penguluaran</a></li>
-                                <li><a href="/pengeluaran/report">Report Pengeluaran</a></li>
+                                <li><a href="{{ url('/pengeluaran') }}">Penguluaran</a></li>
+                                <li><a href="{{ url('/pengeluaran/report')}}">Report Pengeluaran</a></li>
                             </ul>
                         </li>   
                     </ul>
@@ -144,8 +144,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         </div>
                                     </div>
                                         <!-- search-scripts -->
-                                        <script src="/js/classie.js"></script>
-                                        <script src="/js/uisearch.js"></script>
+                                        <script src="{{ url('/js/classie.js') }}"></script>
+                                        <script src="{{ url('/js/uisearch.js') }}"></script>
                                             <script>
                                                 new UISearch( document.getElementById( 'sb-search' ) );
                                             </script>
@@ -212,8 +212,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </div>  
                                 </a>
                                 <ul class="dropdown-menu drp-mnu">
-                                    <li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li> 
-                                    <li> <a href="#"><i class="fa fa-user"></i>Profile</a> </li> 
+                                    <li> <a href="{{ url('#') }}"><i class="fa fa-cog"></i> Settings</a> </li> 
+                                    <li> <a href="{{ url('#') }}"><i class="fa fa-user"></i>Profile</a> </li> 
                                     <li> <a href="{{ url('/logout') }}"><i class="fa fa-sign-out"></i> Logout</a> </li>
                                 </ul>
                             </li>
@@ -238,16 +238,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <!--footer section start-->
             <footer>
-               <p>&copy 2015 Easy Admin Panel. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank"></a></p>
+               <p>&copy 2015 Easy Admin Panel. All Rights Reserved | Design by <a href="{{ url('https://w3layouts.com/') }}" target="_blank"></a></p>
             </footer>
         <!--footer section end-->
 
       <!-- main content end-->
    </section>
   
-<script src="/js/jquery.nicescroll.js"></script>
-<script src="/js/scripts.js"></script>
+<script src="{{ url('/js/jquery.nicescroll.js') }}"></script>
+<script src="{{ url('/js/scripts.js') }}"></script>
 <!-- Bootstrap Core JavaScript -->
-   <script src="/js/bootstrap.min.js"></script>
+   <script src="{{ url('/js/bootstrap.min.js') }}"></script>
 </body>
 </html>
