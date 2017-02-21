@@ -51,7 +51,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <!--logo and iconic logo start-->
             <div class="logo">
-                <h1><a href="{{ url('index.html') }}">Acounting Assistent <span></span></a></h1>
+                <h3><a href="{{ url('index.html') }}">Acounting Assistent <span></span></a></h3>
             </div>
             <div class="logo-icon text-center">
                 <a href="{{ url('/aa') }}"><i class="lnr lnr-home"></i> </a>
@@ -64,7 +64,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <ul class="nav nav-pills nav-stacked custom-nav">
                         <li class="active"><a href="/"><i class="lnr lnr-power-switch"></i><span>Dashboard</span></a></li>
                         <li class="menu-list">
-                            <a href="{{ url('/penerimaan') }}"><i class="lnr lnr-cog"></i>
+                            <a href="{{ url('/penerimaan') }}"><i class="lnr lnr-pencil"></i>
                                 <span>Penerimaan</span></a>
                                 <ul class="sub-menu-list">
                                     <li><a href="{{ url('/penerimaan') }}">Penerimaan</a></li>
@@ -304,7 +304,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </tr>
                                 
                             </table>
-                            <button type="submit" class="btn btn-default">Submit</button>
+                            <button type="submit" class="btn btn-success">Submit</button>
                             <button type="reset" class="btn btn-default">Cancel</button>              
                             </form>
             <!--body wrapper start-->

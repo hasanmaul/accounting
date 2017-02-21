@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('halaman')
-<h1>Accounting Assistent</h1>
+<h3>Accounting Assistent</h3>
 <img src="{{url('images/Acounting Asistant.png')}}">
 
 @endsection
