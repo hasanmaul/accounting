@@ -14,30 +14,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
  <!-- Bootstrap Core CSS -->
-<link href="{{ url('/css/bootstrap.min.css') }}" rel='stylesheet' type='text/css' />
+<link href="{{url('/css/bootstrap.min.css')}}" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" type="text/css" href="{{ url('dtpicker/css/bootstrap-datetimepicker.css') }}">
 <!-- Custom CSS -->
-<link href="{{ url('/css/style.css') }}" rel='stylesheet' type='text/css' />
+<link href="{{url('/css/style.css')}}" rel='stylesheet' type='text/css' />
 <!-- Graph CSS -->
-<link href="{{ url('/css/font-awesome.css') }}" rel="stylesheet"> 
+<link href="{{url('/css/font-awesome.css')}}" rel="stylesheet"> 
 <!-- jQuery -->
 <!-- lined-icons -->
-<link rel="stylesheet" href="{{ url('/css/icon-font.min.css') }}" type='text/css' />
+<link rel="stylesheet" href="{{url('/css/icon-font.min.css')}}" type='text/css' />
 <!-- //lined-icons -->
 <!-- chart -->
-<script src="{{ url('/js/Chart.js') }}"></script>
+<script src="{{url('/js/Chart.js')}}"></script>
 <!-- //chart -->
 <!--animate-->
-<link href="{{ url('/css/animate.css') }}" rel="stylesheet" type="text/css" media="all">
-<script src="{{ url('/js/wow.min.js') }}"></script>
+<link href="{{url('/css/animate.css')}}" rel="stylesheet" type="text/css" media="all">
+<script src="{{url('/js/wow.min.js')}}"></script>
     <script>
          new WOW().init();
     </script>
-<!--//end-animate-->
-<!----webfonts--->
-<link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
-<!---//webfonts---> 
- <!-- Meters graphs -->
-<script src="{{ url('/js/jquery-1.10.2.min.js') }}"></script>
+    <script src="{{ url('plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>
+    <script src="{{ url('dtpicker/moment.js')}}"></script>
+    <script src="{{ url('bootstrap/js/transition.js') }}"></script>
+    <script src="{{ url('bootstrap/js/collapse.js') }}"></script>
+    <script src="{{ url('bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url('/js/jquery-1.10.2.min.js') }}"></script>
+    <script src="{{ url('dtpicker/js/bootstrap-datetimepicker.min.js')}}"></script>
 <!-- Placed js at the end of the document so the pages load faster -->
 
 </head> 
@@ -49,7 +51,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <!--logo and iconic logo start-->
             <div class="logo">
-                <h3><a href="{{ url('index.html') }}">Acounting Assistent<span></span></a></h3>
+                <h1><a href="index.html">Acounting Assistent <span></span></a></h1>
             </div>
             <div class="logo-icon text-center">
                 <a href="{{ url('/aa') }}"><i class="lnr lnr-home"></i> </a>
@@ -62,25 +64,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <ul class="nav nav-pills nav-stacked custom-nav">
                         <li class="active"><a href="/"><i class="lnr lnr-power-switch"></i><span>Dashboard</span></a></li>
                         <li class="menu-list">
-                            <a href="/penerimaan"><i class="lnr lnr-book"></i>
-                                <span>Penerimaan</span></a>
-                                <ul class="sub-menu-list">
-                                    <li><a href="{{ url('/tambahadmin') }}">Tambah Admin</a></li>
-                                </ul>
-                        <li class="menu-list">
-                            <a href="/penerimaan"><i class="lnr lnr-pencil"></i>
+                            <a href="{{ url('/penerimaan') }}"><i class="lnr lnr-pencil"></i>
                                 <span>Penerimaan</span></a>
                                 <ul class="sub-menu-list">
                                     <li><a href="{{ url('/penerimaan') }}">Penerimaan</a></li>
-                                    <li><a href="{{ url('/penerimaan/report') }}">Report Penerimaan</a>
+                                    <li><a href="{{ url('/penerimaan/report') }}">Report Permintaan</a>
                                 </ul>
                         </li>
                         <li class="menu-list"><a href="{{ url('/pengeluaran') }}"><i class="lnr lnr-envelope"></i> <span>Pengeluaran</span></a>
                             <ul class="sub-menu-list">
-                                <li><a href="{{ url('/pengeluaran') }}">Penguluaran</a></li>
-                                <li><a href="{{ url('/pengeluaran/report')}}">Report Pengeluaran</a></li>
+                                <li><a href="{{ url('/pengeluaran') }}">Pengeluaran</a></li>
+                                <li><a href="{{ url('/laporan/pengeluaran') }}">Report Pengeluaran</a></li>
                             </ul>
-                        </li>   
+                        </li>      
                     </ul>
                 <!--sidebar nav end-->
             </div>
@@ -108,7 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                     <h3>You have 3 new messages</h3>
                                                 </div>
                                             </li>
-                                            <li><a href="#">
+                                            <li><a href="{{ url('#') }}">
                                                <div class="user_img"><img src="images/1.png" alt=""></div>
                                                <div class="notification_desc">
                                                 <p>Lorem ipsum dolor sit amet</p>
@@ -124,7 +120,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 </div>
                                               <div class="clearfix"></div>  
                                              </a></li>
-                                            <li><a href="#">
+                                            <li><a href="{{ url('#') }}">
                                                <div class="user_img"><img src="images/1.png" alt=""></div>
                                                <div class="notification_desc">
                                                 <p>Lorem ipsum dolor sit amet </p>
@@ -134,7 +130,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </a></li>
                                             <li>
                                                 <div class="notification_bottom">
-                                                    <a href="#">See all messages</a>
+                                                    <a href="{{ url('#') }}">See all messages</a>
                                                 </div> 
                                             </li>
                                         </ul>
@@ -158,14 +154,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         <!-- //search-scripts -->
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge blue">3</span></a>
+                                <a href="{{ url('#') }}" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge blue">3</span></a>
                                     <ul class="dropdown-menu">
                                         <li>
                                             <div class="notification_header">
                                                 <h3>You have 3 new notification</h3>
                                             </div>
                                         </li>
-                                        <li><a href="#">
+                                        <li><a href="{{ url('#') }}">
                                             <div class="user_img"><img src="images/1.png" alt=""></div>
                                            <div class="notification_desc">
                                             <p>Lorem ipsum dolor sit amet</p>
@@ -181,7 +177,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </div>
                                            <div class="clearfix"></div> 
                                          </a></li>
-                                         <li><a href="#">
+                                         <li><a href="{{ url('#') }}">
                                             <div class="user_img"><img src="images/1.png" alt=""></div>
                                            <div class="notification_desc">
                                             <p>Lorem ipsum dolor sit amet </p>
@@ -191,13 +187,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                          </a></li>
                                          <li>
                                             <div class="notification_bottom">
-                                                <a href="#">See all notification</a>
+                                                <a href="{{ url('#') }}">See all notification</a>
                                             </div> 
                                         </li>
                                     </ul>
                             </li>   
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-tasks"></i><span class="badge blue1">22</span></a>
+                                <a href="{{ url('#') }}" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-tasks"></i><span class="badge blue1">22</span></a>
                                     <ul class="dropdown-menu">
                                         </ul>                                             
                             <div class="clearfix"></div>    
@@ -206,7 +202,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="profile_details">       
                         <ul>
                             <li class="dropdown profile_details_drop">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <a href="{{ url('#') }}" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                     <div class="profile_img">   
                                         <span style="background:url(images/) no-repeat center"> </span> 
                                          <div class="user-name">
@@ -218,8 +214,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </div>  
                                 </a>
                                 <ul class="dropdown-menu drp-mnu">
-                                    <li> <a href="{{ url('#') }}"><i class="fa fa-cog"></i> Settings</a> </li> 
-                                    <li> <a href="{{ url('#') }}"><i class="fa fa-user"></i>Profile</a> </li> 
+                                    <li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li> 
+                                    <li> <a href="#"><i class="fa fa-user"></i>Profile</a> </li> 
                                     <li> <a href="{{ url('/logout') }}"><i class="fa fa-sign-out"></i> Logout</a> </li>
                                 </ul>
                             </li>
@@ -237,14 +233,50 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         <!-- //header-ends -->
             <div id="page-wrapper">
-                @yield('halaman')
+                <form action="{{ url('tambahadmin/save') }}" method="POST" enctype="multipart/form-data">
+                            <table class="table hovered" style="width: 100%">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <tr>
+                                    <td>Nama Lengkap</td>
+                                    <td>
+                                        <div class="input-control text full-size">
+                                            <input class="form-control" type="text" name="name" id="name" autocomplete="off" required>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td>
+                                        <div class="input-control text full-size">
+                                            <input class="form-control" type="email" name="email" id="email" autocomplete="off" required>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Password</td>
+                                    <td>
+                                        <div class="input-control text full-size">
+                                            <input class="form-control" name="password" id="password" type="password" autocomplete="off" required>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br>
+                            <div id="success"></div>
+                            <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="reset" class="btn btn-default">Reset</button>
+                            </div>
+                            </div>                          
+                        </form>
             <!--body wrapper start-->
             </div>
              <!--body wrapper end-->
         </div>
         <!--footer section start-->
             <footer>
-               <p>&copy 2015 Easy Admin Panel. All Rights Reserved | Design by <a href="{{ url('https://w3layouts.com/') }}" target="_blank"></a></p>
+               <p>&copy 2016 Easy Admin Panel. All Rights Reserved | Design by <a href="{{ url('https://w3layouts.com/') }}" target="_blank">Hasannova.</a></p>
             </footer>
         <!--footer section end-->
 
@@ -253,6 +285,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   
 <script src="{{ url('/js/jquery.nicescroll.js') }}"></script>
 <script src="{{ url('/js/scripts.js') }}"></script>
+<script type="text/javascript">
+    $('.for_year').datetimepicker({ format: 'YYYY-MM-DD' });
+    </script>
 <!-- Bootstrap Core JavaScript -->
    <script src="{{ url('/js/bootstrap.min.js') }}"></script>
 </body>

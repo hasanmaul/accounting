@@ -36,3 +36,5 @@ Route::get('penerimaan/delete/{id}', 'DashboardController@delete');
 
 Route::get('laporan/penerimaan/report', 'DashboardController@penerimaanreportpdf');
 Route::get('laporan/pengeluaran/report', 'DashboardController@pengeluaranreportpdf');
+Route::get('tambahadmin', 'DashboardController@tambahadmin');
+Route::post('tambahadmin/save', 'DashboardController@tambahadminsave');

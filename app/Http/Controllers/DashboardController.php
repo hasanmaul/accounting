@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use DB;
 use \App\tampilan;  
 use \App\penerimaan;
+use \App\User;
 use \App\reportpenerimaan;
 use App\Http\Requests;
 
@@ -123,5 +124,29 @@ class DashboardController extends Controller
         $pdf = \App::make('dompdf.wrapper');
         $pdf->loadHTML($html->render())->setPaper('a4')->setOrientation('potrait')->setWarnings(false);
         return $pdf->stream();
-    } 
+    }
+
+    public function tambahadmin()
+    {   
+        // if(\Auth::user()->type == 'admin'){
+        //     return view('laporan.tambahadmin');
+        // }
+        // else{
+        //     abort(403);
+        // }
+
+        return view('laporan.tambahadmin');
+    }
+
+    public function tambahadminsave(Request $req)
+    {
+        $post = new User;
+        $post->name = $req->input('name');       
+        $post->email = $req->input('email');
+        $post->password = \Hash::make($req->input('password'));
+
+        $post->save();
+        return redirect(url('/'));
+    }
+
 }
