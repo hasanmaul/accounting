@@ -204,12 +204,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <div class="profile_img">   
                                         <span style="background:url(images/) no-repeat center"> </span> 
                                          <div class="user-name">
-                                            <p>HASAN<span></span></p>
+                                            <p>{{ Auth::user()->email }}<span></span></p>
                                          </div>
                                          <i class="lnr lnr-chevron-down"></i>
                                          <i class="lnr lnr-chevron-up"></i>
                                         <div class="clearfix"></div>    
-                                    </div>  
+                                    </div>   
                                 </a>
                                 <ul class="dropdown-menu drp-mnu">
                                     <li> <a href="{{ url('#') }}"><i class="fa fa-cog"></i> Settings</a> </li> 

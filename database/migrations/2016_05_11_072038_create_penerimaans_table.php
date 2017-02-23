@@ -14,7 +14,7 @@ class CreatePenerimaansTable extends Migration
     {
         Schema::create('penerimaans', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('username');
+            $table->string('email');
             $table->string('nama_penerima');
             $table->string('jenis_kelamin');
             $table->string('ttl');

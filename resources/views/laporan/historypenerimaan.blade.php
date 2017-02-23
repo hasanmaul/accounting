@@ -210,12 +210,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <div class="profile_img">   
                                         <span style="background:url(images/) no-repeat center"> </span> 
                                          <div class="user-name">
-                                            <p>HASAN<span></span></p>
+                                            <p>{{ Auth::user()->email }}<span></span></p>
                                          </div>
                                          <i class="lnr lnr-chevron-down"></i>
                                          <i class="lnr lnr-chevron-up"></i>
                                         <div class="clearfix"></div>    
-                                    </div>  
+                                    </div> 
                                 </a>
                                 <ul class="dropdown-menu drp-mnu">
                                     <li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li> 
@@ -264,6 +264,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <table class="table table-bordered table-hover table-striped">
                                 <thead>
                                     <th>No.</th>
+                                    <th>Email Penerima</th>
                                     <th>Nama Penerima</th>
                                     <th>Jenis Kelamin</th>
                                     <th>Tanggal Penerima</th>
@@ -279,6 +280,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     @foreach($data as $post)
                                         <tr>
                                             <td>{{ $i++}}</td>                       
+                                            <td>{{ $post->email }}</td>                       
                                             <td>{{ $post->nama_penerima }}</td>                       
                                             <td>{{ $post->jenis_kelamin }}</td>                       
                                             <td>{{ $post->ttl }}</td>                       

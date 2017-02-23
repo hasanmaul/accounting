@@ -14,7 +14,7 @@ class CreateTampilansTable extends Migration
     {
         Schema::create('tampilans', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('username');
+            $table->string('email');
             $table->string('nama_nasabah');
             $table->string('jenis_kelamin');
             $table->string('tanggal_pengeluaran');

@@ -204,7 +204,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <div class="profile_img">   
                                         <span style="background:url(images/) no-repeat center"> </span> 
                                          <div class="user-name">
-                                            <p>HASAN<span></span></p>
+                                            <p>{{ Auth::user()->email }}<span></span></p>
                                          </div>
                                          <i class="lnr lnr-chevron-down"></i>
                                          <i class="lnr lnr-chevron-up"></i>
@@ -258,7 +258,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <table class="table table-bordered table-hover table-striped">
                                 <thead>
                                     <th>No.</th>
-                                    <th>Username</th>
+                                    <th>Email Pengeluaran        </th>
                                     <th>Nama Nasabah</th>
                                     <th>Jenis Kelamin</th>
                                     <th>Tanggal Pengeluaran</th>
@@ -271,8 +271,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <?php $i = 1; ?>
                                     @foreach($data as $post)
                                         <tr>
-                                            <td>{{ $i++ }}</td>                       
-                                            <td>{{ $post->username }}</td>                       
+                                            <td>{{ $i++ }}</td>
+
+                                            <td>{{ $post->email }}</td>
+
+                                            <td>{{ $post->nama_nasabah }}</td>                                              
                                             <td>{{ $post->jenis_kelamin }}</td>                       
                                             <td>{{ $post->tanggal_pengeluaran }}</td>                       
                                             <td>{{ $post->no_rek }}</td>                       
@@ -280,7 +283,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <td>{{ $post->jml_setoran }}</td>
                                             <td>{{ "Rp.".number_format($post->jumlah,0,',','.').",-" }}</td>                     
                                             <!-- <td>{{ $post->status }}</td> -->
-                                            <td><a href="{{ url('laporan/history/pengeluaran/edit/'.$post->id) }}">Ubah</a>
+                                            <td><a href="{{ url('laporan/history/pengeluaran/edit/'.$post->id) }}">Edit</a>
                                             <a href="{{ url('pengeluaran/delete/'.$post['id']) }}" onclick="return confirm('Apakah anda yakin akan di hapus?')">Hapus</a>
                                             </td>
                                             </tr>

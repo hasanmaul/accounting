@@ -49,10 +49,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <!--logo and iconic logo start-->
             <div class="logo">
-                <h3><a href="index.html">Acounting Assistent <span></span></a></h3>
+                <h3><a href="{{ url('index.html') }}">Acounting Assistent <span></span></a></h3>
             </div>
             <div class="logo-icon text-center">
-                <a href="{{ url('/aa') }}"><i class="lnr lnr-home"></i> </a>
+                <a href="{{ url('/aa')}} "><i class="lnr lnr-home"></i> </a>
             </div>
 
             <!--logo and iconic logo end-->
@@ -71,10 +71,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </li>
                         <li class="menu-list"><a href="{{ url('/pengeluaran') }}"><i class="lnr lnr-envelope"></i> <span>Pengeluaran</span></a>
                             <ul class="sub-menu-list">
-                                <li><a href="{{ url('/pengeluaran') }}">Penguluaran</a></li>
+                                <li><a href="{{ url('/pengeluaran') }}">Pengeluaran</a></li>
                                 <li><a href="{{ url('/laporan/pengeluaran') }}">Report Pengeluaran</a></li>
                             </ul>
-                        </li>
+                        </li>      
                     </ul>
                 <!--sidebar nav end-->
             </div>
@@ -110,7 +110,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 </div>
                                                <div class="clearfix"></div> 
                                              </a></li>
-                                             <li class="odd"><a href="{{ url('#') }}">
+                                             <li class="odd"><a href="#">
                                                 <div class="user_img"><img src="images/1.png" alt=""></div>
                                                <div class="notification_desc">
                                                 <p>Lorem ipsum dolor sit amet </p>
@@ -204,12 +204,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <div class="profile_img">   
                                         <span style="background:url(images/) no-repeat center"> </span> 
                                          <div class="user-name">
-                                            <p>HASAN<span></span></p>
+                                            <div class="user-name">
+                                            <p>{{ Auth::user()->email }}<span></span></p>
                                          </div>
                                          <i class="lnr lnr-chevron-down"></i>
                                          <i class="lnr lnr-chevron-up"></i>
                                         <div class="clearfix"></div>    
-                                    </div>  
+                                    </div>   
                                 </a>
                                 <ul class="dropdown-menu drp-mnu">
                                     <li> <a href="{{ url('#') }}"><i class="fa fa-cog"></i> Settings</a> </li> 
@@ -231,14 +232,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         <!-- //header-ends -->
             <div id="page-wrapper">
-              <form action="{{ url('/pengeluaran/edit') }}" method="POST" enctype="multipart/form-data">
+               <form action="{{ url('/penerimaan/edit') }}" method="POST" enctype="multipart/form-data">
                             <table class="table hovered" style="width: 100%">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <tr>
-                                    <td>Username</td>
+                                    <td></td>
                                     <td>
                                         <div class="input-control text full-size">
-                                            <input class="form-control" type="text" name="username" id="username" id="username" autocomplete="off" >
+                                            <input class="form-control" type="hidden" name="email" id="email" value="{{ Auth::user()->email }}" autocomplete="off" readonly>
                                         </div>
                                     </td>
                                 </tr>
@@ -270,11 +271,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>No Rekening</td>
+                                    <td>Nama Perusahaan</td>
                                     <td>                        
                                         <div class="input-control text full-size">
-                                            <input class="form-control" type="text" name="no_rek" id="no_rek" autocomplete="off">
+                                            <input class="form-control" type="text" name="nama_perusahaan" id="nama perusahaan" autocomplete="off">
                                             </input>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>No Rekening</td>
+                                    <td>
+                                        <div class="input-control text full-size">
+                                            <textarea class="form-control" type="text" name="no_rek" id="no_rek" autocomplete="off"></textarea>
                                         </div>
                                     </td>
                                 </tr>
@@ -310,7 +319,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <!--footer section start-->
             <footer>
-               <p>&copy 2015 Easy Admin Panel. All Rights Reserved | Design by <a href="{{ urll('https://w3layouts.com/') }}" target="_blank"></a></p>
+               <p>&copy 2015 Easy Admin Panel. All Rights Reserved | Design by <a href="{{ url('https://w3layouts.com/') }}" target="_blank"></a></p>
             </footer>
         <!--footer section end-->
 

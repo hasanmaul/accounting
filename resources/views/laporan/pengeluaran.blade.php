@@ -206,12 +206,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <div class="profile_img">   
                                         <span style="background:url(images/) no-repeat center"> </span> 
                                          <div class="user-name">
-                                            <p>HASAN<span></span></p>
+                                            <p>{{ Auth::user()->email }}<span></span></p>
                                          </div>
                                          <i class="lnr lnr-chevron-down"></i>
                                          <i class="lnr lnr-chevron-up"></i>
                                         <div class="clearfix"></div>    
-                                    </div>  
+                                    </div>
                                 </a>
                                 <ul class="dropdown-menu drp-mnu">
                                     <li> <a href="{{ url('#') }}"><i class="fa fa-cog"></i> Settings</a> </li> 
@@ -237,10 +237,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <table class="table hovered" style="width: 100%">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <tr>
-                                    <td>Username</td>
+                                    <td></td>
                                     <td>
                                         <div class="input-control text full-size">
-                                            <input class="form-control" type="text" name="username" id="username" id="username" autocomplete="off" >
+                                            <input class="form-control" type="hidden" name="email" id="email" value="{{ Auth::user()->email }}" autocomplete="off" readonly>
                                         </div>
                                     </td>
                                 </tr>

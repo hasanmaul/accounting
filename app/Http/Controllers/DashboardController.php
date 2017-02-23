@@ -47,7 +47,7 @@ class DashboardController extends Controller
 	}
     public function penerimaansave(Request $request){
         $post = new penerimaan;
-        $post->username = $request->username;
+        $post->email = $request->email;
         $post->nama_penerima = $request->nama_penerima;
         $post->jenis_kelamin = $request->jenis_kelamin;
         $post->ttl = $request->ttl;
@@ -94,7 +94,7 @@ class DashboardController extends Controller
     public function pengeluaransave(Request $request)
     {
         $post = new tampilan;
-        $post->username = $request->username;
+        $post->email = $request->email;
         $post->nama_nasabah = $request->nama_nasabah;
         $post->jenis_kelamin = $request->jenis_kelamin;
         $post->tanggal_pengeluaran = $request->tanggal_pengeluaran;
